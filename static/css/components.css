@@ -1,0 +1,1245 @@
+/* ========================================
+   COMPONENT-SPECIFIC STYLES
+   ======================================== */
+
+/* Balance Simulator */
+.simulator-card { /* Use variable */
+    background: var(--gradient-simulator);
+    color: var(--white);
+}
+
+.simulator-display {
+    margin: 30px 0;
+}
+
+.balance-visual {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.balance-visual i {
+    font-size: 4em;
+    margin-bottom: 15px;
+}
+
+.balance-visual h2 {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.slider-container {
+    margin: 20px 0;
+}
+
+.slider {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--white);
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.slider::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--white);
+    cursor: pointer;
+    border: none;
+}
+
+/* Use variable */ .slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.simulation-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.result-item {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.result-item i {
+    font-size: 2em;
+}
+
+.result-item h4 {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+/* Transactions */
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: var(--light);
+    transition: var(--transition); /* Use variable */
+}
+
+.transaction-item:hover {
+    background: var(--light-gray);
+    transform: translateX(5px);
+}
+
+.transaction-item.income {
+    border-left: 4px solid #10b981;
+}
+
+.transaction-item.expense {
+    border-left: 4px solid #ef4444;
+}
+
+.transaction-item.anomaly {
+    border: 2px solid var(--danger);
+    background: #fee2e2;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.transaction-info {
+    flex: 1;
+}
+
+.transaction-info h4 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.transaction-info p {
+    font-size: 0.85em; /* Use variable */
+    color: var(--text-secondary);
+}
+
+.transaction-amount {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.transaction-amount.income { /* Use variable */
+    color: var(--success);
+}
+
+.transaction-amount.expense { /* Use variable */
+    color: var(--danger);
+}
+
+/* Anomaly Badge */
+.anomaly-badge {
+    background: var(--danger);
+    color: var(--white);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-weight: 700;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Recommendations */
+.recommendation {
+    background: var(--gradient-recommendation);
+    border-left: 4px solid var(--primary);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.recommendation:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+.recommendation.smart {
+    background: var(--gradient-recommendation-smart);
+    border-left-color: var(--success);
+}
+
+.recommendation h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.recommendation p {
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Voice Interface */
+.voice-interface {
+    text-align: center;
+    padding: 40px;
+}
+
+.voice-button {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: none;
+    background: var(--gradient-voice-button);
+    color: var(--white);
+    font-size: 3em;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 5px 25px rgba(239, 68, 68, 0.3);
+}
+
+.voice-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 35px rgba(239, 68, 68, 0.4);
+}
+
+.voice-button.active {
+    animation: voicePulse 1.5s infinite;
+}
+
+@keyframes voicePulse {
+    0%, 100% {
+        box-shadow: 0 5px 25px rgba(239, 68, 68, 0.3);
+    }
+    50% {
+        box-shadow: 0 5px 40px rgba(239, 68, 68, 0.6);
+        transform: scale(1.05);
+    }
+}
+
+#voiceStatus {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: var(--text-primary);
+}
+
+.voice-transcript {
+    background: var(--light);
+    padding: 20px; /* Use variable */
+    border-radius: 10px; /* Use variable */
+    margin: 20px 0;
+}
+
+.voice-examples { /* Use variable */
+    background: var(--bg-voice-examples);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid var(--warning);
+}
+
+.voice-examples ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.voice-examples li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.voice-examples li:last-child {
+    border-bottom: none;
+}
+
+/* Upload Zone */
+.upload-zone {
+    border: 3px dashed var(--primary);
+    border-radius: 15px;
+    padding: 60px 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    background: var(--bg-surface); /* Use variable */
+}
+
+.upload-zone:hover {
+    background: var(--light-gray);
+    border-color: var(--secondary);
+    transform: scale(1.02);
+}
+
+.upload-zone i {
+    font-size: 4em;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.upload-zone h4 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.upload-zone p {
+    color: #6b7280;
+}
+
+/* Heatmap */
+.heatmap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.heatmap-cell {
+    aspect-ratio: 1;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: 700;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.heatmap-cell:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px var(--shadow-lg);
+}
+
+.heatmap-cell i {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.heatmap-cell h4 {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.heatmap-cell p {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+/* Heat levels */
+/* Use variable */ .heat-low {
+    background: var(--gradient-heat-low);
+}
+
+/* Use variable */ .heat-medium {
+    background: var(--gradient-heat-medium);
+}
+
+/* Use variable */ .heat-high {
+    background: var(--gradient-heat-high);
+}
+
+/* Use variable */ /* Filters */
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filters .form-control {
+    flex: 1;
+}
+/* Chart Container */
+.chart-container {
+    position: relative;
+    height: 300px;
+    padding: 10px;
+}
+
+.chart-card canvas {
+    max-height: 300px !important;
+}
+
+.anomaly-card {
+    border-radius: 12px;
+    padding: 16px;
+    margin: 15px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Use variable */ .anomaly-card.high {
+    border-left: 6px solid var(--danger);
+}
+
+/* Use variable */ .anomaly-card.medium {
+    border-left: 6px solid var(--warning);
+}
+
+/* Use variable */ .anomaly-card.low {
+    border-left: 6px solid var(--success);
+}
+
+/* Use variable */ .badge.high { background: var(--bg-badge-high); color: var(--color-badge-high); }
+/* Use variable */ .badge.medium { background: var(--bg-badge-medium); color: var(--color-badge-medium); }
+/* Use variable */ .badge.low { background: var(--bg-badge-low); color: var(--color-badge-low); }
+
+/* Use variable */ .badge {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+}
+
+/* Use variable */ .tip-box {
+    background: var(--bg-tip-box);
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.tooltip-icon {
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 6px;
+}
+
+/* Use variable */ .tooltip-text {
+    visibility: hidden;
+    width: 260px;
+    background-color: var(--dark);
+    color: var(--white);
+    text-align: left;
+    padding: 8px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 10;
+    bottom: 125%;
+    left: 50%; /* Use variable */
+    transform: translateX(-50%);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* Use variable */ .tooltip-icon:hover .tooltip-text {
+    visibility: visible;
+}
+
+.severity {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-left: 8px;
+    font-weight: 600;
+}
+
+/* Use variable */ .severity.low {
+    background: var(--bg-badge-low);
+    color: var(--color-badge-low);
+}
+
+/* Use variable */ .severity.medium {
+    background: var(--bg-badge-medium);
+    color: var(--color-badge-medium);
+}
+
+/* Use variable */ .severity.high {
+    background: var(--bg-badge-high);
+    color: var(--color-badge-high);
+}
+
+.chat-window {
+    height: 520px; /* Consolidated height for chat window */
+    border: 1px solid #e5e7eb;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+.chat-user {
+    text-align: right; /* Use variable */
+    color: var(--primary);
+    font-weight: 600; /* Use variable */
+}
+
+.chat-bot { /* Use variable */
+    text-align: left; /* Use variable */
+    color: var(--text-primary);
+}
+
+.ai-insight-box {
+    border-left: 4px solid #10b981;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.chat-message.ai .highlight { /* Use variable */
+  color: var(--success);
+  font-weight: 600; /* Use variable */
+}
+
+.chat-message.ai .warning { /* Use variable */
+  color: var(--danger);
+  font-weight: 600; /* Use variable */
+}
+
+.chat-input-bar {
+  display: flex;
+  gap: 10px;
+  padding-top: 12px;
+}
+
+.chat-input-bar input {
+  flex: 1;
+  padding: 10px 14px; /* Use variable */
+  border-radius: 8px; /* Use variable */
+  border: 1px solid var(--border-soft);
+}
+
+.chat-input-bar button {
+  padding: 10px 18px; /* Use variable */
+  border-radius: 8px; /* Use variable */
+  background: var(--primary);
+  color: var(--white);
+  border: none; /* Use variable */
+  cursor: pointer; /* Use variable */
+}
+
+.chat-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.chat-table th {
+  background: var(--bg-chat-table-header);
+  padding: 8px; /* Use variable */
+  text-align: left; /* Use variable */
+  font-weight: 600; /* Use variable */
+}
+
+.chat-table td { /* Use variable */
+  padding: 8px; /* Use variable */
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.chat-table tr:last-child td {
+  border-bottom: none;
+}
+
+.table-note {
+  margin-top: 8px;
+  font-size: 13px; /* Use variable */
+  color: var(--text-secondary);
+}
+
+/* ===============================
+   CHATBOT UI IMPROVEMENTS
+================================ */
+
+/* .chat-message is consolidated below */
+
+
+/* AI CARD */
+.ai-card {
+  border-radius: 14px; /* Use variable */
+  padding: 12px; /* Use variable */
+  max-width: 80%; /* Use variable */
+  box-shadow: 0 4px 12px var(--shadow-lg); /* Consolidated from multiple definitions */
+  /* Inherits background, border, color from .card in UNIFIED CARD SYSTEM */
+  /* Specific overrides for ai-card */
+}
+
+/* AI HEADER */
+.ai-header {
+  font-weight: 600; /* Use variable */
+  font-size: 13px; /* Use variable */
+  color: var(--primary-dark);
+  margin-bottom: 6px;
+}
+
+/* AI BODY */
+.ai-body {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* SECTION HEADINGS */
+.ai-body h4 {
+  margin: 10px 0 4px; /* Use variable */
+  font-size: 13px; /* Use variable */
+  color: var(--text-primary);
+}
+
+/* MONEY HIGHLIGHT */
+.money {
+  color: var(--success); /* Use variable */
+  font-weight: 600;
+}
+
+.quick-actions button {
+  background: var(--bg-qa-btn);
+  color: var(--color-qa-btn);
+  border: none; /* Use variable */
+  padding: 6px 12px; /* Use variable */
+  border-radius: 999px; /* Use variable */
+  font-size: 12px; /* Use variable */
+  cursor: pointer; /* Use variable */
+  margin-right: 6px; /* Use variable */
+}
+
+.quick-actions button:hover { /* Use variable */
+  background: var(--bg-qa-btn-hover);
+}
+
+.chat-header {
+    margin-bottom: 20px;
+}
+
+.chat-header h1 {
+    font-size: 26px;
+    font-weight: 700; /* Use variable */
+    color: var(--text-primary);
+}
+
+.chat-header p {
+    color: var(--text-secondary); /* Use variable */
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+/* Use variable */ .chat-bubble {
+    max-width: 75%;
+    padding: 12px 14px; /* Consolidated from multiple definitions */
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Use variable */ .bot-bubble {
+    
+    color: var(--text-primary); /* Use variable */
+    border-bottom-left-radius: 4px;
+}
+
+.quick-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* Use variable */ .qa-btn {
+    background: #eef2ff;
+    color: #4338ca;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Use variable */ .qa-btn:hover {
+    background: #6366f1;
+    color: white;
+}
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px; /* Use variable */
+    border: 1px solid var(--border-soft);
+}
+
+.chat-input button {
+    background: var(--primary); /* Use variable */
+    color: var(--white);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Use variable */ .qa-btn {
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-soft); /* Use variable */
+    
+    cursor: pointer;
+}
+
+/* Use variable */ .qa-btn:hover {
+    background: var(--bg-surface-2); /* Use variable */
+}
+
+.language-toggle {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.lang-btn {
+    padding: 4px 10px;
+    border-radius: 8px; /* Use variable */
+    border: 1px solid var(--border-soft);
+  
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* Use variable */ .lang-btn.active {
+    background: var(--primary); /* Use variable */
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.ai-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+}
+
+.ai-table th, .ai-table td {
+    border: 1px solid var(--border-soft); /* Use variable */
+    padding: 8px;
+    text-align: left;
+}
+
+
+/* Use variable */
+.language-toggle {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0; /* Consolidated */
+}
+
+.lang-btn {
+    padding: 6px 14px; /* Use variable */
+    border-radius: 20px; /* Use variable */
+    border: 1px solid var(--primary); /* Use variable */
+    background: var(--white);
+    color: var(--primary);
+    cursor: pointer;
+    font-size: 13px;
+}
+
+
+/* ===============================
+   CHATBOT UI IMPROVEMENTS
+================================ */
+
+.chat-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+} /* Consolidated */
+
+.chat-messages {
+    flex: 1;                    /* 🔥 takes remaining space */
+    overflow-y: auto;           /* 🔥 ONLY scroll here */
+    overflow-x: hidden;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    border-radius: 12px; /* Consolidated */
+}
+
+
+.chat-message {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.chat-message.user {
+    justify-content: flex-end;
+}
+
+.chat-message.ai {
+    justify-content: flex-start;
+}
+
+.user-bubble {
+    max-width: 65%;
+    padding: 12px 16px;
+    background: #6c63ff;
+    color: var(--white); /* Use variable */
+    border-radius: 16px 16px 4px 16px;
+}
+
+.ai-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.chat-container {
+    display: flex; /* Consolidated */
+    flex-direction: column;
+    height: 520px; /* Consolidated fixed overall height */
+}
+
+.chat-messages {
+    scroll-behavior: smooth;
+}
+
+/* ===============================
+   CHAT MESSAGE ANIMATION
+================================ */ /* Consolidated */
+
+.chat-message {
+    animation: fadeSlideIn 0.25s ease-out;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.status-ok { color: green; font-weight: bold; }
+.status-review { color: red; font-weight: bold; }
+
+/* OCR Preview Card */
+
+.ocr-preview-card {
+    padding: 16px;
+    border-radius: 14px; /* Use variable */
+    box-shadow: 0 4px 12px var(--shadow-lg);
+    margin-top: 20px;
+}
+
+/* Use variable */ .ocr-header {
+    font-weight: 600; /* Use variable */
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.ocr-sub {
+    font-size: 12px; /* Use variable */
+    color: var(--text-secondary);
+    margin-left: 8px;
+}
+
+.ocr-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ocr-table th {
+    background: var(--bg-surface-2);
+    padding: 10px;
+    text-align: left;
+    font-size: 13px;
+}
+
+.ocr-table td {
+    padding: 8px;
+    border-bottom: 1px solid var(--border-soft); /* Use variable */
+}
+
+.ocr-input {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid var(--border-soft); /* Use variable */
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.ocr-select {
+    width: 100%; /* Use variable */
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid var(--border-soft);
+}
+
+.review-row {
+    background: var(--bg-review-row);
+}
+
+.status {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Use variable */ .status.review {
+    color: var(--warning);
+}
+
+/* Use variable */ .status.ok {
+    color: var(--success);
+}
+
+/* Use variable */ .ocr-actions {
+    margin-top: 14px;
+    text-align: right;
+}
+
+.ocr-add-btn {
+    background: linear-gradient(135deg,var(--primary),var(--secondary)); /* Use variables */
+    color: var(--white);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.ocr-add-btn:hover {
+    opacity: 0.9; /* Use variable */
+}
+
+.ocr-remove-btn { /* Use variable */
+    background:var(--bg-ocr-remove-btn);
+    color:var(--color-ocr-remove-btn);
+    border:none;
+    padding:6px 10px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.receipt-preview {
+    /* Consolidated definition */
+    width: 350px; /* From last definition */
+    height: 450px; /* From last definition */
+    border-radius: 12px; /* Consolidated */
+    overflow: hidden; /* Consolidated */
+    display: flex; /* Consolidated */
+    align-items: center; /* Consolidated */
+    justify-content: center; /* Consolidated */
+    position: relative; /* From third definition */
+    cursor: grab; /* From last definition */
+    border: 1px solid var(--border-soft); /* From second definition */
+    box-shadow: inset 0 0 0 1px var(--light); /* From second definition */
+}
+
+.ocr-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px; /* Consolidated */
+}
+
+.upload-zone {
+    flex: 1;
+}
+
+.receipt-preview::before {
+    content: "Preview"; /* Use variable */
+    color: var(--text-muted);
+}
+
+.receipt-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.receipt-preview iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.receipt-preview-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.preview-title {
+    font-size: 14px; /* Use variable */
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.pdf-preview-box {
+    width: 100%;
+    height: 420px; /* Consolidated fixed height */
+    overflow: hidden; /* Consolidated */
+    position: relative; /* Consolidated */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.preview-media {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.preview-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.preview-btn {
+    background: var(--white); /* Use variable */
+    border: none;
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.pdf-toolbar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px;
+    background: var(--bg-surface-2); /* Use variable */
+}
+
+.pdf-toolbar button {
+    background: var(--primary); /* Use variable */
+    color: var(--white);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#pdfCanvas {
+    flex: 1; /* Consolidated */
+    width: 100%; /* Consolidated */
+}
+
+#previewContainer {
+    overflow: auto;
+    max-height: 500px;
+    display: flex;
+    align-items: center; /* Consolidated */
+    justify-content: center; /* Consolidated */
+    background: var(--dark); /* Use variable */
+}
+/* Use variable */
+.pdf-preview-box {
+    width: 100%;
+    height: 500px;   /* fixed height */
+    overflow: auto;  /* enables scroll when zoomed */
+    position: relative;
+    background: var(--bg-surface); /* Use variable */
+    box-shadow: 0 4px 10px var(--shadow); /* Use variable */
+    display: flex; /* Consolidated */
+    flex-direction: column; /* Consolidated */
+}
+
+.transaction-item.updated {
+    border-left: 4px solid var(--border-transaction-updated);
+    background: var(--bg-transaction-updated);
+}
+
+.hidden {
+    display: none;
+}
+
+.voice-desc {
+    font-weight: 500; /* Use variable */
+    color: var(--text-primary);
+}
+
+.expense { /* Use variable */
+    color: var(--danger);
+    font-weight: 600; /* Use variable */
+}
+
+.income { /* Use variable */
+    color: var(--success);
+    font-weight: 600; /* Use variable */
+}
+
+.voice-review-container{
+    margin-top: 25px;
+    background: var(--bg-surface-2); /* Use variable */
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.voice-review-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.voice-review-table th{
+    background: var(--bg-chat-table-header);
+    padding: 10px; /* Use variable */
+    text-align: left;
+    font-weight: 600; /* Use variable */
+    border-bottom: 2px solid var(--border-soft);
+}
+
+.voice-review-table td{
+    padding: 10px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.voice-review-table input,
+.voice-review-table select{
+    width: 100%;
+    padding: 6px;
+    border-radius: 6px; /* Use variable */
+    border: 1px solid var(--border-soft);
+    background: var(--bg-card); /* Use variable */
+    color: var(--text-primary); /* Use variable */
+}
+
+.voice-review-table button{
+    background: linear-gradient(90deg,var(--primary),var(--secondary)); /* Use variables */
+    color:var(--white);
+    border:none;
+    padding:6px 12px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* ========================================
+   SETTINGS MODAL FIX
+======================================== */
+
+/* Default input visibility */
+.settings-content input,
+.settings-content select,
+.settings-content textarea { /* Removed !important and hardcoded values, relying on variable system */
+    color: var(--text-primary);
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+}
+
+/* Labels */
+.settings-content label { /* Removed !important and hardcoded values, relying on variable system */
+    color: var(--text-primary);
+}
+
+/* Dropdown profile text */
+.profile-dropdown,
+.profile-dropdown * { /* Removed !important and hardcoded values, relying on variable system */
+    color: var(--text-primary);
+}
+
+/* Profile name & email */
+.profile-name,
+.profile-email { /* Removed !important and hardcoded values, relying on variable system */
+    color: var(--text-primary);
+}
+
+/* Removed DARK MODE SUPPORT, LIGHT MODE SUPPORT, MODAL INPUT FIX (IMPORTANT), and duplicate dark-theme overrides
+   as they are now handled by the unified variable system in main.css and general input styles. */
+
+/* ================================
+   UNIFIED CARD SYSTEM (kept for clarity, but styles are applied via variables)
+================================ */
+
+.card,
+.section-card,
+.inner-card,
+.ai-box,
+.voice-box,
+.ocr-box,
+.chat-box {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-soft);
+    border-radius: 16px;
+    color: var(--text-primary); /* Use variable */
+    box-shadow: 0 10px 30px var(--shadow-lg);
+}
+
+/* Nested surfaces */
+.card-inner,
+.sub-section,
+.extracted-transactions,
+.ai-result {
+    background: var(--bg-surface-2);
+    border-radius: 14px;
+    border: 1px solid var(--border-soft);
+    color: var(--text-secondary);
+}
+
+input,
+select,
+textarea {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    color: var(--text-primary);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--text-muted);
+}
+
+table {
+    background: var(--bg-surface-2);
+    color: var(--text-primary);
+}
+
+.ai-response,
+.chat-response {
+    background: var(--bg-surface-2);
+    color: var(--text-primary);
+    border-radius: 14px;
+}
+
+.drop-zone {
+    background: var(--bg-card);
+    border: 2px dashed var(--accent);
+    color: var(--text-secondary);
+}
+
+.voice-transactions,
+.example-commands {
+    background: var(--bg-surface-2);
+    border-left: 4px solid var(--accent);
+    color: var(--text-secondary);
+}

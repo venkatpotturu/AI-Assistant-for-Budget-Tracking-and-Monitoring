@@ -1,0 +1,129 @@
+description,category
+Swiggy food order,Food
+Zomato dinner order,Food
+Dominos pizza delivery,Food
+Lunch at office cafeteria,Food
+Dinner with friends at restaurant,Food
+Burger King meal purchase,Food
+Breakfast tiffin order,Food
+Late night snacks order,Food
+Cafe coffee bill payment,Food
+Street food snacks expense,Food
+Office lunch meal expense,Food
+Online food delivery bill,Food
+Family dinner restaurant bill,Food
+Fast food takeaway order,Food
+Food court meal purchase,Food
+
+Uber ride to college,Transport
+Ola cab booking,Transport
+Auto rickshaw fare payment,Transport
+Bus ticket to office,Transport
+Train ticket booking,Transport
+Metro card recharge,Transport
+Petrol expense at fuel station,Transport
+Diesel fuel purchase,Transport
+Taxi ride airport drop,Transport
+Bike fuel refill,Transport
+Cab fare for meeting,Transport
+Public transport ticket expense,Transport
+Parking fee payment,Transport
+Vehicle service travel expense,Transport
+Long distance bus booking,Transport
+
+Milk and vegetables purchase,Groceries
+Grocery shopping at supermarket,Groceries
+BigBasket grocery order,Groceries
+Rice and oil purchase,Groceries
+Fruits and vegetables expense,Groceries
+Weekly grocery shopping,Groceries
+Dairy products purchase,Groceries
+Snacks and provisions shopping,Groceries
+Household grocery items purchase,Groceries
+Monthly grocery stock purchase,Groceries
+Vegetable market expense,Groceries
+Online grocery delivery,Groceries
+Supermarket food essentials,Groceries
+Cooking supplies purchase,Groceries
+Grocery bill payment,Groceries
+
+Electricity bill payment,Utilities
+Water bill payment,Utilities
+Mobile phone recharge,Utilities
+Internet broadband bill,Utilities
+Gas cylinder booking,Utilities
+WiFi monthly subscription,Utilities
+Postpaid mobile bill,Utilities
+Utility bill online payment,Utilities
+Electricity meter recharge,Utilities
+Internet service provider bill,Utilities
+House rent electricity charges,Utilities
+Gas pipeline bill payment,Utilities
+Mobile data pack recharge,Utilities
+Home utility services bill,Utilities
+Telephone bill payment,Utilities
+
+Amazon shopping order,Shopping
+Flipkart electronics purchase,Shopping
+Clothing purchase from mall,Shopping
+Online shopping bill payment,Shopping
+Footwear purchase,Shopping
+Mobile accessories purchase,Shopping
+Laptop bag shopping expense,Shopping
+Fashion accessories order,Shopping
+Household items shopping,Shopping
+Online sale purchase,Shopping
+New clothes purchase,Shopping
+Shopping mall bill payment,Shopping
+Gift item shopping expense,Shopping
+Personal items online purchase,Shopping
+Electronics shopping expense,Shopping
+
+Netflix subscription payment,Entertainment
+Movie ticket booking,Entertainment
+BookMyShow movie booking,Entertainment
+Spotify premium subscription,Entertainment
+OTT platform monthly fee,Entertainment
+Online gaming recharge,Entertainment
+Concert ticket booking,Entertainment
+Weekend movie expense,Entertainment
+Streaming service bill,Entertainment
+Entertainment app subscription,Entertainment
+Cinema hall ticket expense,Entertainment
+Music app subscription,Entertainment
+Online event ticket booking,Entertainment
+Video streaming payment,Entertainment
+Recreation activity expense,Entertainment
+
+Doctor consultation fee,Healthcare
+Medicine purchase from pharmacy,Healthcare
+Hospital visit charges,Healthcare
+Medical test payment,Healthcare
+Clinic appointment fee,Healthcare
+Dental checkup expense,Healthcare
+Health insurance co payment,Healthcare
+Eye checkup bill,Healthcare
+Medical store purchase,Healthcare
+Lab test charges,Healthcare
+Physician consultation bill,Healthcare
+Emergency medical expense,Healthcare
+Vaccination charges,Healthcare
+Healthcare service payment,Healthcare
+Prescription medicine expense,Healthcare
+
+Stationery items purchase,Others
+Gift purchase for friend,Others
+Miscellaneous cash expense,Others
+Donation payment,Others
+Personal expense payment,Others
+Unexpected small expense,Others
+Office supplies purchase,Others
+Event contribution expense,Others
+Daily cash spending,Others
+General miscellaneous expense,Others
+Random purchase expense,Others
+Local shop small expense,Others
+Festival expense contribution,Others
+Unplanned spending,Others
+Other personal expense,Others
+
